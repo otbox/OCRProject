@@ -1,0 +1,6 @@
+[submodule "ocr_frontend"]
+	path = ocr_frontend
+	url = git@github.com:otbox/ocr_frontend.git
+[submodule "ocr_backend"]
+	path = ocr_backend
+	url = git@github.com:otbox/ocr_backend.git
