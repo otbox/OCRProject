@@ -1,4 +1,4 @@
-# 📄 Paggo OCR - Sistema Completo de Análise de Documentos com IA
+# 📄  OCR - Sistema Completo de Análise de Documentos com IA
 
 Sistema fullstack para upload, processamento OCR e análise inteligente de documentos fiscais usando IA.
 
@@ -25,7 +25,7 @@ Sistema fullstack para upload, processamento OCR e análise inteligente de docum
 
 ## 🎯 Visão Geral
 
-O **Paggo OCR** é uma solução completa que permite:
+O **OCR** é uma solução completa que permite:
 
 1. **Upload de Documentos** - Usuários fazem upload de notas fiscais (imagens ou PDFs)
 2. **Processamento OCR** - Extração automática de texto usando Tesseract
@@ -457,32 +457,32 @@ Content-Disposition: attachment; filename="nota_fiscal_result.pdf"
 
 ```bash
 # Backend
-git clone https://github.com/seu-usuario/paggo-ocr-api.git
-cd paggo-ocr-api
+git clone https://github.com/seu-usuario/-ocr-api.git
+cd -ocr-api
 
 # Frontend (em outro terminal)
-git clone https://github.com/seu-usuario/paggo-ocr-web.git
-cd paggo-ocr-web
+git clone https://github.com/seu-usuario/-ocr-web.git
+cd -ocr-web
 ```
 
 ### 2. Setup do Backend
 
 ```bash
-cd paggo-ocr-api
+cd -ocr-api
 
 # Instalar dependências
 npm install
 
 # Configurar PostgreSQL (Docker)
-docker run --name paggo-postgres \
+docker run --name -postgres \
   -e POSTGRES_PASSWORD=postgres \
-  -e POSTGRES_DB=paggo_ocr \
+  -e POSTGRES_DB=_ocr \
   -p 5432:5432 \
   -d postgres:15
 
 # Criar arquivo .env
 cat > .env << EOF
-DATABASE_URL="postgresql://postgres:postgres@localhost:5432/paggo_ocr?schema=public"
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/_ocr?schema=public"
 JWT_SECRET="$(node -e "console.log(require('crypto').randomBytes(32).toString('hex'))")"
 JWT_EXPIRES_IN="7d"
 STORAGE_TYPE="local"
@@ -506,7 +506,7 @@ Backend rodando em: **http://localhost:3001**
 ### 3. Setup do Frontend
 
 ```bash
-cd paggo-ocr-web
+cd -ocr-web
 
 # Instalar dependências
 npm install
@@ -584,7 +584,7 @@ Frontend rodando em: **http://localhost:3000**
    STORAGE_TYPE=oracle
    ORACLE_REGION=sa-saopaulo-1
    ORACLE_NAMESPACE=...
-   ORACLE_BUCKET_NAME=paggo-ocr-uploads
+   ORACLE_BUCKET_NAME=-ocr-uploads
    ORACLE_ACCESS_KEY=...
    ORACLE_SECRET_KEY=...
    OPENAI_API_KEY=sk-proj-...
@@ -617,7 +617,7 @@ URL do App: `https://seu-app.vercel.app`
 
 ### Backend
 ```
-paggo-ocr-api/
+-ocr-api/
 ├── src/
 │   ├── auth/              # Autenticação JWT
 │   ├── users/             # Gerenciamento de usuários
@@ -634,7 +634,7 @@ paggo-ocr-api/
 
 ### Frontend
 ```
-paggo-ocr-web/
+-ocr-web/
 ├── src/
 │   ├── app/
 │   │   ├── (auth)/        # Páginas públicas
@@ -690,7 +690,7 @@ paggo-ocr-web/
 
 ### Backend
 ```bash
-cd paggo-ocr-api
+cd -ocr-api
 npm run test              # Testes unitários
 npm run test:e2e          # Testes end-to-end
 npm run test:cov          # Cobertura
@@ -698,7 +698,7 @@ npm run test:cov          # Cobertura
 
 ### Frontend
 ```bash
-cd paggo-ocr-web
+cd -ocr-web
 npm run test              # Jest + Testing Library
 npm run test:e2e          # Playwright (recomendado)
 ```
@@ -734,16 +734,16 @@ npm run test:e2e          # Playwright (recomendado)
 
 ## 📄 Licença
 
-MIT License - Desenvolvido para o case técnico Paggo
+MIT License 
 
 ---
 
 ## 👥 Contato
 
-Desenvolvido por [Seu Nome]
-- GitHub: [@seu-usuario](https://github.com/seu-usuario)
+Desenvolvido por Otavio Cruz
+- GitHub: [@seu-usuario](https://github.com/otbox)
 - Email: seu.email@example.com
-- LinkedIn: [Seu Perfil](https://linkedin.com/in/seu-perfil)
+- LinkedIn: [Seu Perfil](https://linkedin.com/in/otaviomcruz)
 
 ---
 
@@ -763,4 +763,3 @@ Desenvolvido por [Seu Nome]
 ---
 
 **⭐ Se este projeto foi útil, considere dar uma estrela no GitHub!**
-
